@@ -1,0 +1,74 @@
+Q.1 (a) List out and briefly explain basic building blocks of Computer System (3 Marks)
+
+Input Unit: Accepts data from the user (e.g., Keyboard, Mouse).
+Output Unit: Displays results (e.g., Monitor, Printer).
+Memory Unit: Stores data and instructions (e.g., RAM, ROM).
+Control Unit (CU): Controls and coordinates all operations.
+Arithmetic and Logic Unit (ALU): Performs arithmetic and logical operations.
+
+Q.1 (b) Describe various symbols used for preparing a flowchart (4 Marks)
+Oval: Start/End of the process.
+Rectangle: Process or operation step.
+Parallelogram: Input/Output.
+Diamond: Decision-making step.
+Arrow: Shows the flow of control.
+
+Q.1 (c) List and Explain Different Data Types Available in C (7 Marks)
+In C programming, data types specify the type of data that a variable can store. They define the size, range, and operations that can be performed on the variable.
+
+1. int (Integer)
+
+Definition: Used to store whole numbers (both positive and negative).
+Size: Typically 4 bytes (may vary based on the system).
+Range: -2,147,483,648 to 2,147,483,647.
+
+Example:
+
+int num = 10;
+printf("%d", num); // Output: 10
+
+2. float (Floating-Point)
+Definition: Used to store decimal numbers (single precision).
+Size: Typically 4 bytes.
+Range: 1.2E-38 to 3.4E+38.
+Example:
+
+float price = 12.34;
+printf("%f", price); // Output: 12.340000
+
+3. char (Character)
+Definition: Used to store a single character.
+Size: 1 byte.
+Range: -128 to 127 (ASCII values).
+Example:
+
+char grade = 'A';
+printf("%c", grade); // Output: A
+
+4. double (Double Precision Floating-Point)
+Definition: Used to store large decimal numbers with double precision.
+Size: Typically 8 bytes.
+Range: 2.3E-308 to 1.7E+308.
+Example:
+
+double distance = 12345.6789;
+printf("%lf", distance); // Output: 12345.678900
+
+5. void (No Data Type)
+Definition: Represents no data type or empty value.
+Commonly used in:
+Functions that do not return any value (void main()).
+Pointers (void *ptr).
+Example:
+
+void display() {
+    printf("Hello, World!");
+}
+
+6. Derived Data Types
+Definition: Built upon basic data types to handle complex structures.
+Types:
+Array: Collection of similar data types.
+Pointer: Stores the address of a variable.
+Structure: Groups related data of different types.
+

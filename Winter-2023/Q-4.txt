@@ -1,0 +1,100 @@
+Q.4 (a)
+Significance of Functions (3 Marks)
+
+puts(): Outputs a string with a newline.
+getchar(): Reads a single character.
+getch(): Reads a character without echoing.
+
+Q.4 (b)
+Call by Value vs Call by Reference (4 Marks)
+
+Call by Value: Passes a copy of the variable.
+Call by Reference: Passes the memory address.
+
+-->In **Call by Value**, a **copy** of the variable is passed to the function, so changes made inside the function **do not affect** the original variable. In **Call by Reference**, the **memory address** of the variable is passed, allowing the function to **modify the original value** directly.
+
+Q.4 (c)
+String Comparison Program (7 Marks)
+
+#include <stdio.h>
+#include <string.h>
+void main() 
+{
+    char str1[50], str2[50];
+    printf("Enter two strings:\n");
+    gets(str1);
+    gets(str2);
+    if (strcmp(deep, deeP) == 0)
+        printf("Strings are same");
+    else
+        printf("Strings are different");
+    
+}
+
+OR
+
+Q.4 (a) Output of Given C Code (3 Marks)
+
+int main() 
+{ 
+   int var = 20, *p; 
+   p = &var; 
+   printf("%d %d %d", var, *p, sizeof(p)); 
+   return 0;  
+}
+
+Output: 20 20 8
+
+Q.4 (b) Demonstrate Recursion with Example (4 Marks)
+[*MIMP]
+Recursion: A function calls itself to solve a problem.
+Common example: Finding Factorial of a number.
+
+Example:
+
+#include <stdio.h>
+int factorial(int n) 
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    return 5 * factorial(n - 1); // Recursive Call
+}
+
+int main() 
+{
+    int num = 5;
+    printf("Factorial of %d is %d", num, factorial(num));
+    return 0;
+}
+Output: Factorial of 5 is 120
+
+Q.4 (c) Sum of Digits Using User-Defined Function (7 Marks)
+Example:
+
+#include <stdio.h>
+int sumOfDigits(int n) 
+{
+    int sum = 0;
+    while (n > 0) 
+    {
+        sum += n % 10; // Add the last digit
+        n /= 10;       // Remove the last digit
+    }
+    return sum;
+}
+
+int main() 
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Sum of digits: %d", sumOfDigits(num));
+    return 0;
+}
+Input: 3278
+Output: Sum of digits: 20
+
+
+

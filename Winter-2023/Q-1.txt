@@ -1,0 +1,32 @@
+Q.1 (a)
+Algorithm to Check if a Number is Even or Odd (3 Marks)
+
+1-->Start
+2-->Input a number n.
+3-->If n % 2 == 0:
+4-->Print "Even Number".
+5-->Else:
+6-->Print "Odd Number".
+7-->End
+
+Q.1 (b)
+Flowchart to Find Factorial of a Number (4 Marks)
+
+1-->Start(terminal shape)
+2-->Input a number n.(Cross Rectangle)
+3-->Initialize a variable fact = 1.(Rectangle)
+4-->Loop from i = 1 to n:(Rectangle)
+5-->fact = fact * i(Rectangle)
+6-->Print the value of fact.(Cross Rectangle)
+7-->End(terminal shape)
+
+Q.1 (c)[**IMP]
+Components of a Computer System (7 Marks)
+
+[1]Input Devices: Keyboard, Mouse.
+[2]Output Devices: Monitor, Printer.
+[3]Processor (CPU): Brain of the computer.
+[4]Memory: RAM (Temporary), ROM (Permanent).
+[5]Storage Devices: HDD, SSD.
+[6]Software: System Software, Application Software.
+[7]Networking Devices: Modem, Router.

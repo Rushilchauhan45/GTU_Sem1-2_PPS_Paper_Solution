@@ -1,0 +1,105 @@
+Q.2 (a)
+Output of Given Code (3 Marks)
+
+printf("%d", 15<2);  // 0
+printf("%d", 15&&2); // 1
+printf("%d", 7%10);  // 7
+
+Output: 0 1 7
+
+Q.2 (b)
+Bitwise Operators Example (4 Marks)
+
+#include <stdio.h>
+int main() 
+{
+    int a = 5, b = 3;
+    printf("AND: %d\n", a & b); // 1
+    printf("OR: %d\n", a | b);  // 7
+    printf("XOR: %d\n", a ^ b); // 6
+    return 0;
+}
+
+Q.2 (c) Explain C Tokens in Detail (7 Marks)
+
+1. Keywords
+Reserved words predefined by the C compiler.
+Cannot be used as variable names or identifiers.
+Example: int, float, return, if, else, while.
+Example:
+
+int x = 5;
+if (x > 0) {
+    printf("Positive number");
+}
+
+2. Identifiers
+Used to name variables, functions, arrays, etc.
+Must begin with a letter (A-Z, a-z) or underscore (_).
+Followed by letters, digits (0-9), or underscores.
+Case-sensitive.
+Cannot use keywords as identifiers.
+Example:
+
+int number = 10;
+float average;
+
+3. Constants
+Fixed values that cannot be changed during program execution.
+Types:
+Integer Constants: 10, -20
+Floating Constants: 3.14, -0.005
+Character Constants: 'A', '9'
+String Constants: "Hello"
+Example:
+
+const float PI = 3.14;
+
+4. Strings
+Sequence of characters enclosed in double quotes (" ").
+Stored as an array of characters ending with a null character (\0).
+Example:
+
+char name[] = "John";
+printf("%s", name);
+
+5. Operators
+Special symbols used to perform operations.
+Types of Operators:
+Arithmetic: +, -, *, /, %
+Relational: ==, !=, >, <, >=, <=
+Logical: &&, ||, !
+Bitwise: &, |, ^, ~
+Example:
+
+int a = 10, b = 5;
+printf("%d", a + b); // Output: 15
+
+6. Special Symbols
+Used for specific tasks in the program.
+Common symbols:
+{ } → Block of code
+[ ] → Array declaration
+( ) → Function call
+; → Calling function
+, → Separator
+Example:
+
+int arr[5] = {1, 2, 3, 4, 5};
+
+
+OR
+
+Q.2 (c) OR: Explain Different Storage Classes in C with an Example (7 Marks)
+
+There are four types of storage classes in C:
+
+Comparison Table of Storage Classes
+-----------------------------------------------------------------------------
+|Storage Class	|Scope	|Lifetime	        |Default Value	|StorageLocation|
+----------------------------------------------------------------------------|
+|auto	        |Local	|Block Execution	|Garbage Value	|Stack          |
+|static	        |Local	|Program Lifetime	|Zero	Static  |Memory Area    |
+|extern	        |Global	|Program Lifetime	|Zero	Global  |Memory Area    |
+|register	    |Local	|Block Execution	|Garbage Value	|CPU Register   |
+-----------------------------------------------------------------------------

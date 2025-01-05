@@ -1,0 +1,86 @@
+Q.3 (a) Find Errors and Correct (3 Marks)
+Original Code:
+
+int main() {
+    if (10 % 2 == 0) {
+        break;
+    }
+}
+Corrected Code:
+
+int main() {
+    if (10 % 2 == 0) {
+        printf("Even Number");
+    }
+    return 0;
+}
+Error: break cannot be used outside a loop or switch.
+
+Q.3 (b) Output of Given Code (4 Marks)
+Code:
+
+void main() {
+    int a = 0;
+    while (a < 10) {
+        a++;
+        if (a % 3 == 1)
+            continue;
+        printf(" %d", a);
+    }
+}
+Output: 2 3 5 6 8 9
+
+Q.3 (c) Program to Find Factorial (7 Marks)
+
+#include <stdio.h>
+int main() {
+    int n, fact = 1;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    printf("Factorial: %d", fact);
+    return 0;
+}
+
+OR
+Q.3 (a) Find out error(s), if any in the following code and correct it: 
+
+int main() { 
+    printf(“%f %d”, 7.0%5.0, 5 || -2); 
+}
+
+(1)Incorrect use of quotation marks: The quotation marks used in the printf function are not standard double quotes ("), but curly quotes (“”). Replace them with standard quotes.
+
+(2)Modulo operation with floating-point numbers: The modulo operator (%) can only be used with integers, not floating-point numbers. You cannot perform 7.0 % 5.0. You need to either cast the values to integers or use another approach for floating-point modulo calculation.
+
+(3)Logical OR operation: The expression 5 || -2 evaluates as true (since both 5 and -2 are non-zero values, which are considered true). The result is a Boolean value (1 or 0), and this part of the code is fine, but it's good practice to clarify the expected behavior in context.
+
+Q.3 (b) Examine following code and give output of it. 
+
+void main()
+{ 
+   int i=1; 
+   for (i=10; i>=1 ; --i) 
+   { 
+        printf (“ %d”, i); 
+        i--; 
+   } 
+}
+
+Q.3 (C)Program to Sum Digits (7 Marks)
+
+#include <stdio.h>
+int main() {
+    int n, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while (n > 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    printf("Sum of digits: %d", sum);
+    return 0;
+}
+
