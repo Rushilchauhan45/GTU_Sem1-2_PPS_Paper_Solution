@@ -16,7 +16,7 @@ Q.1 (b) Draw a Flowchart to find the largest of three numbers (A, B, C).
 7-->End
 
 Q.1 (c) Explain different types of operators in C with their precedence and associativity.
-
+[*MMIMP]
 Types of Operators in C:
 
 [1]Arithmetic Operators (+, -, , /, %)

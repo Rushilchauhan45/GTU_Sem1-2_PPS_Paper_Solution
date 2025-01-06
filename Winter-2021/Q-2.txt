@@ -1,4 +1,5 @@
 Q.2 (a) Discuss break and continue statements in C with examples.
+[*IMP]
 
 break: Used to exit a loop or switch statement.
 continue: Skips the current iteration and moves to the next.
@@ -19,7 +20,7 @@ for(int i=1; i<=10; i++)
 
 Q.2 (b) Differentiate while and do..while Loop (4 Marks)[*IMP]
 ------------------------------------------------------------------------------
-while	                             |do..while
+               while                 |            do..while
 ------------------------------------------------------------------------------
 Condition is checked first.	         |Condition is checked after execution.
 May not execute if the condition is  |
@@ -43,9 +44,51 @@ Pattern 1:
 
 Code :
 
+#include<stdio.h>
+
+void main()
+{
+    for(int i=3;i<=3;i++)
+    {
+        for(int k=(3-i);k>=1;k--)
+        {
+            printf(" ");
+        }
+        
+        for(int j=1;j<=i;j++)
+        {
+            print(" %d",i);
+        }
+        printf("\n);
+    }
+
+}//end of void main
+  
+
 Pattern 2:
 1  
 2 3  
 4 5 6  
 
 Code:
+
+#include<stdio.h>
+
+void main()
+{
+    int num=1;
+    for(int i=1;i<=3;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf(" %d",num);
+            num++;
+        }
+        printf("\n");
+    }
+
+}//end of void main
+
+
+
+ 

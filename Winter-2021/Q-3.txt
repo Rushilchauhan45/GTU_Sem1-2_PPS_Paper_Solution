@@ -17,7 +17,7 @@ int main()
         
 }
 
-Q.3 (b) Explain getch(), getchar(), gets(), puts() functions.
+Q.3 (b) Explain getch(), getchar(), gets(), puts() functions.[*IMP]
 
 getch(): Read a character without echoing it.
 getchar(): Read a character with echo.
@@ -44,7 +44,7 @@ int multiply(int a, int b)
 }
 float divide(int a, int b) 
 { 
-    return (b != 0) ? (float)a / b : 0; 
+    return a / b; 
 }
 
 int main() 
