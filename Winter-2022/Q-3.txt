@@ -1,15 +1,21 @@
 Q.3 (a) Find Errors and Correct (3 Marks)
 Original Code:
 
-int main() {
-    if (10 % 2 == 0) {
+int main() 
+{
+    if (10 % 2 == 0) 
+    {
         break;
     }
+    
 }
+
 Corrected Code:
 
-int main() {
-    if (10 % 2 == 0) {
+int main() 
+{
+    if (10 % 2 == 0) 
+    {
         printf("Even Number");
     }
     return 0;
@@ -19,12 +25,16 @@ Error: break cannot be used outside a loop or switch.
 Q.3 (b) Output of Given Code (4 Marks)
 Code:
 
-void main() {
+void main() 
+{
     int a = 0;
-    while (a < 10) {
-        a++;
+    while (0 < 10) 
+    {
+        a++;//3
         if (a % 3 == 1)
+        {
             continue;
+        }    
         printf(" %d", a);
     }
 }
@@ -33,22 +43,26 @@ Output: 2 3 5 6 8 9
 Q.3 (c) Program to Find Factorial (7 Marks)
 
 #include <stdio.h>
-int main() {
+void main() 
+{
     int n, fact = 1;
     printf("Enter a number: ");
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
+     {
         fact *= i;
     }
     printf("Factorial: %d", fact);
-    return 0;
+    
 }
 
 OR
 Q.3 (a) Find out error(s), if any in the following code and correct it: 
 
-int main() { 
-    printf(“%f %d”, 7.0%5.0, 5 || -2); 
+int main() 
+{ 
+    printf(“%f %d”, 7.0 % 5.0, 5 || -2); 
+
 }
 
 (1)Incorrect use of quotation marks: The quotation marks used in the printf function are not standard double quotes ("), but curly quotes (“”). Replace them with standard quotes.
@@ -69,18 +83,27 @@ void main()
    } 
 }
 
-Q.3 (C)Program to Sum Digits (7 Marks)
+Output:10 8 6 4 2 
+
+Q.3 (C)Program to Sum Digits (7 Marks)[*MMIMP]
 
 #include <stdio.h>
-int main() {
-    int n, sum = 0;
+void main() 
+{
+    //Variable declarations
+    int number, sum = 0;
+
+    //input number
     printf("Enter a number: ");
-    scanf("%d", &n);
-    while (n > 0) {
-        sum += n % 10;
-        n /= 10;
+    scanf("%d", &number);
+    
+    //Sum of digits
+    while (number > 0) 
+    {
+        sum =sum + (number % 10);
+        number = number/ 10;
     }
     printf("Sum of digits: %d", sum);
-    return 0;
+    
 }
 

@@ -1,0 +1,213 @@
+Q-5(A).Give the significance of getc(), getw(), fscanf()
+
+getc(): Reads a single character from a file.
+getw(): Reads an integer from a file. (Deprecated)
+fscanf(): Reads formatted data from a file.
+
+Q-5.(B)Compare structure and union[*IMP]
+
+Read on paper Winter-2023
+
+Q-5.(C)Describe categories of User defined function[*IMP](7 marks)
+
+In C, user-defined functions are categorized based on whether they accept arguments and whether they return a value. 
+-->There are main four types of UDF Fuctions...
+
+[1]Function with No Arguments and No Return Value:
+
+Definition: These functions neither take any parameters nor return any value.
+Usage: Used for tasks that are self-contained and do not require external input/output.
+
+example :
+---------
+void xyz() 
+{
+    printf("Hello, World!\n");
+}
+
+[2]Function with Arguments but No Return Value:
+
+Definition: These functions accept parameters but do not return any value.
+Usage: Used when data needs to be passed to the function, but no result needs to be returned.
+
+example :
+----------
+void Sum(int a, int b) 
+{
+    printf("Sum: %d\n", a + b);
+}
+
+[3]Function with No Arguments but Returns a Value:
+
+Definition: These functions do not accept parameters but return a value.
+Usage: Used when a value needs to be returned, but no input parameters are required.
+
+Example:
+--------
+int getNumber() 
+{
+    return 42;
+}
+
+[4]Function with Arguments and Returns a Value:
+
+Definition: These functions accept parameters and also return a value.
+Usage: Used for operations where both input and output are required.
+
+example:
+---------
+int add(int a, int b) 
+{
+    return a + b;
+}
+
+
+Technique to remember:
+----------------------
+NANR
+WANR
+NRWR
+WRNA
+
+OR
+
+Q-5.(A)List down and briefly explain methods for dynamic memory allocation.
+
+1-->malloc(): Allocates a specified block of memory in the heap and returns a void pointer to the beginning of the block.
+
+2-->calloc(): Allocates multiple blocks of memory, initializes them to zero, and returns a void pointer to the first block.
+
+3-->realloc(): Resizes previously allocated memory blocks while preserving their content and returns a void pointer to the new memory location.
+
+Q-5.(B)Write a C program to copy content of one file to other with the help of file handling functions.
+
+#include <stdio.h>
+
+int main() {
+    FILE *source, *destination;
+    char ch;
+
+    // Open source file in read mode
+    source = fopen("source.txt", "r");
+    if (source == NULL) 
+    {
+        printf("Could not open source file.\n");
+        return 1;
+    }
+
+    // Open destination file in write mode
+    destination = fopen("destination.txt", "w");
+    if (destination == NULL) 
+    {
+        printf("Could not open destination file.\n");
+        fclose(source);
+        return 1;
+    }
+
+    // Copy content from source to destination
+    while ((ch = fgetc(source)) != EOF) 
+    {
+        fputc(ch, destination);
+    }
+
+    printf("File copied successfully!\n");
+
+    // Close both files
+    fclose(source);
+    fclose(destination);
+
+    return 0;
+}
+
+Q-5(C).  Explain any four string handling functions with an example.[*IMP]
+
+[1]strlen()
+-----------
+Definition: Returns the length of a string (excluding the null terminator).
+Syntax: size_t strlen(const char *str);
+Example:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char str[] = "Hello";
+    printf("Length of string: %zu\n", strlen(str));  // Output: 5
+    return 0;
+}
+
+[2]strcpy()
+-------------
+Definition: Copies the contents of one string into another.
+Syntax: char *strcpy(char *dest, const char *src);
+Example:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char src[] = "Hello";
+    char dest[10];
+    strcpy(dest, src);  // Copying "Hello" into dest
+    printf("Destination String: %s\n", dest);  // Output: Hello
+    return 0;
+}
+
+[3]strcmp()
+------------
+Definition: Compares two strings lexicographically.
+Syntax: int strcmp(const char *str1, const char *str2);
+Return Value:
+0: If both strings are equal.
+<0: If the first string is lexicographically smaller.
+>0: If the first string is lexicographically larger.
+Example:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char str1[] = "Hello";
+    char str2[] = "World";
+    int result = strcmp(str1, str2);
+    if (result == 0) 
+    {
+        printf("Strings are equal.\n");
+    } else if (result < 0) 
+    {
+        printf("First string is smaller.\n");
+    } else 
+    {
+        printf("First string is larger.\n");
+    }
+    return 0;
+}
+
+[4]strcat()
+-------------
+Definition: Concatenates (appends) one string to the end of another.
+Syntax: char *strcat(char *dest, const char *src);
+Example:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    char str1[20] = "Hello";
+    char str2[] = " World";
+    strcat(str1, str2);  // Concatenates " World" to "Hello"
+    printf("Concatenated String: %s\n", str1);  // Output: Hello World
+    return 0;
+}
+
+
+
+----------------------End----------------------
+
+
+
+

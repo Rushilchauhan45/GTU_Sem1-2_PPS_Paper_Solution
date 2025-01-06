@@ -25,24 +25,105 @@ Example:
 FILE *file = fopen("file.txt", "r");
 fclose(file);
 
-Q.5 (c)
+Q.5 (c)[*MMIMP]
 Find Max and Min in Array (7 Marks)
+Array : it is the Multiple collection of variables of Same Data type. 
 
 #include <stdio.h>
-int main()
+void main()
 {
+    //Define Variables
     int arr[10], i, max, min;
+
+    //Get 10 numbers from user as input
     printf("Enter 10 numbers:\n");
+
     for (i = 0; i < 10; i++)
     { 
-        scanf("%d", &arr[i]);
+        scanf("%d", &arr[i]); 
     }
-    max = min = arr[0];
-    for (i = 1; i < 10; i++) 
+
+    max =  arr[0];
+    min =  arr[0];
+
+    
+    //Check number is max or min
+    for (i = 2; i < 10; i++) 
     {
-        if (arr[i] > max) max = arr[i];
-        if (arr[i] < min) min = arr[i];
+        //check number is maximum
+        if (arr[i] > max) 
+        {
+            max = arr[i];
+        }
+
+        //check number is minimum
+        if (arr[i] < min) 
+        {
+            min = arr[i];
+        }
     }
-    printf("Max: %d, Min: %d", max, min);
+    printf("Max: %d \n Min: %d", max, min);
+    
+}
+
+OR 
+
+Q-5.(A)Give the output of following C code. 
+int main()
+{ 
+   int arr[3][2]={1,2,3,4,5,6}; 
+   printf(“%d %d %d”, arr[0][1], arr[1][0], arr[2][1]); 
+   return 0;  
+}
+
+Output : 2 3 6
+
+Q-5.(B)Briefly explain memory management functions.[*IMP]
+
+1. malloc (Memory Allocation)
+Allocates a specified amount of memory during runtime.
+
+#include <stdlib.h>
+
+int *ptr = (int*)malloc(5 * sizeof(int)); // Allocates memory for 5 integers
+
+Returns: A pointer to the allocated memory, or NULL if the allocation fails.
+Use Case: Used to allocate a block of memory dynamically.
+
+2. calloc (Contiguous Allocation)
+Allocates memory for an array of elements and initializes all bytes to zero.
+
+#include <stdlib.h>
+
+int *ptr = (int*)calloc(5, sizeof(int)); // Allocates memory for 5 integers and initializes to 0
+Returns: A pointer to the allocated memory, or NULL if the allocation fails.
+Use Case: Preferred when memory needs to be initialized.
+
+
+Q-5.(C) Write a C program to copy one file to other.[*IMP]
+
+#include <stdio.h>
+
+int main() 
+{
+    FILE *src, *dest;
+    char ch;
+
+    src = fopen("source.txt", "r");
+    dest = fopen("destination.txt", "w");
+
+    if (!src || !dest) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    while ((ch = fgetc(src)) != EOF)
+        fputc(ch, dest);
+
+    printf("File copied successfully!\n");
+
+    fclose(src);
+    fclose(dest);
     return 0;
 }
+

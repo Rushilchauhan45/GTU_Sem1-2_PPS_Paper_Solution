@@ -1,13 +1,13 @@
-Q.2 (a) Demonstrate the working of Bitwise Shift and sizeof Operator (3 Marks)
+Q.2 (a) Demonstrate the working of Bitwise Shift and sizeof Operator (3 Marks)[*IMP]
 
 #include <stdio.h>
-int main()
+void main()
 {
     int x = 8; 
     printf("Left Shift: %d\n", x << 1); // 16
     printf("Right Shift: %d\n", x >> 1); // 4
     printf("Size of int: %lu bytes\n", sizeof(int)); // 4
-    return 0;
+    
 }
 
 Q.2 (b) Differentiate while and do..while Loop (4 Marks)
@@ -31,27 +31,36 @@ while(//Condition)                   |do
 Q.2 (c) C Program to Check Character Type (7 Marks)
 
 #include <stdio.h>
-int main() {
+void main() 
+{
     char ch;
     printf("Enter a character: ");
     scanf("%c", &ch);
     if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z')
+    {
         printf("Alphabet\n");
+    }
     else if (ch >= '0' && ch <= '9')
+    {
         printf("Digit\n");
+    }
     else if (ch == ' ')
+    {
         printf("Space\n");
+    }
     else
+    {
         printf("Special Character\n");
-    return 0;
-}
+    }
+    
+}//End of void main fucntion
 
 OR
 
 Pattern Program (7 Marks)
 
 #include <stdio.h>
-int main() 
+void main() 
 {
     for (int i = 1; i <= 4; i++) 
     {
@@ -61,5 +70,5 @@ int main()
         }
         printf("\n");
     }
-    return 0;
+    
 }
