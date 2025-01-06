@@ -1,0 +1,129 @@
+Q.3 (a) Explain Different Types of Constants.
+
+Integer Constants: Whole numbers (e.g., 1, 100).
+Floating-Point Constants: Decimal numbers (e.g., 1.5, 3.14).
+Character Constants: Single character enclosed in quotes (e.g., 'A').
+String Constants: Group of characters (e.g., "Hello").
+
+Q.3 (b) Define Algorithm and Explain Symbols Used in Flowchart.
+
+Algorithm: Step-by-step procedure to solve a problem.
+
+Symbols:
+--------
+Oval: Start/End
+Rectangle: Process
+Diamond: Decision
+Arrow: Flow of Control
+
+Q.3 (c) Program to Check Last Digit is Even or Odd
+
+#include <stdio.h>
+
+void main() 
+{
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    if ((num % 10) % 2 == 0)
+    {
+            printf("Last digit is Even\n");
+    }
+    else
+    {
+            printf("Last digit is Odd\n");
+    }
+    
+}//end of void main
+
+OR
+
+Q.3 (A)Explain getch().gets(),getchar().
+
+getch(): Reads a single character from the keyboard without echoing it on the screen.
+
+getchar(): Reads a single character from the standard input (keyboard) and echoes it on the screen.
+
+gets(): Reads an entire line of text (string) from the standard input until a newline (\n) is encountered. (Note: gets() is unsafe and deprecated in modern C.)
+
+Q.3 (b) List out the operators used in C language and explain any three with example.
+
+[1]Arithmetic Operators: Used to perform basic arithmetic operations.
+[2]Relational Operators: Used to compare two values.
+[3]Logical Operators: Used to perform logical operations.
+[4]Bitwise Operators: Used to perform bit-level operations.
+[5]Assignment Operators: Used to assign values to variables.
+[6]Increment/Decrement Operators: Used to increase or decrease the [7]value of a variable.
+[8]Conditional (Ternary) Operator: Used for conditional expressions.
+
+Explanation:
+-------------
+[1]Arithmetic Operators: Used to perform basic arithmetic operations.
+
+Code:
+-----
+#include <stdio.h>
+
+int main() 
+{
+    int a = 10, b = 5;
+    printf("Addition: %d\n", a + b);     // Output: 15
+    printf("Subtraction: %d\n", a - b);  // Output: 5
+    printf("Multiplication: %d\n", a * b); // Output: 50
+    printf("Division: %d\n", a / b);     // Output: 2
+    printf("Modulus: %d\n", a % b);      // Output: 0
+    return 0;
+}
+
+[2]Relational Operators: Used to compare two values.
+
+Code:
+-----
+#include <stdio.h>
+
+int main() 
+{
+    int a = 10, b = 5;
+    printf("a > b: %d\n", a > b);  // Output: 1 (true)
+    printf("a < b: %d\n", a < b);  // Output: 0 (false)
+    printf("a == b: %d\n", a == b); // Output: 0 (false)
+    return 0;
+}
+
+[3]Conditional (Ternary) Operator: Used for conditional expressions.
+
+Code:
+-----
+#include <stdio.h>
+
+int main() 
+{
+    int a = 10, b = 20;
+    int max;
+
+    // Using ternary operator to find the maximum
+    max = (a > b) ? a : b;
+
+    printf("The maximum value is: %d\n", max);
+    return 0;
+}
+
+
+Q.3 (c) Program to Find Sum of First N Odd Numbers.[Example 1+3+5+7+...+N]
+
+#include <stdio.h>
+
+void main() 
+{
+    int n, sum = 0;
+    printf("Enter value of N: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i += 2) 
+    {
+        sum += i;
+    }
+    printf("Sum of first N odd numbers: %d\n", sum);
+    
+}//end of main fuction

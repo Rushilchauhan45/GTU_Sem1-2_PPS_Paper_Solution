@@ -1,0 +1,177 @@
+Q.3 (a) Write a program to check if a character is a vowel.
+
+#include <stdio.h>
+int main() 
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+    {
+        printf("Vowel");
+    }
+    else
+    {
+        printf("Not a vowel");
+    }
+        
+}
+
+Q.3 (b) Explain getch(), getchar(), gets(), puts() functions.
+
+getch(): Read a character without echoing it.
+getchar(): Read a character with echo.
+gets(): Read a string (unsafe, deprecated).
+puts(): Display a string.
+
+Q.3(C)Develop a menu-based program to perform addition, multiplication, 
+subtraction and division using user-defined function.
+
+#include <stdio.h>
+
+// Function declarations
+int add(int a, int b) 
+{ 
+    return a + b; 
+}
+int subtract(int a, int b) 
+{ 
+    return a - b; 
+}
+int multiply(int a, int b) 
+{ 
+    return a * b; 
+}
+float divide(int a, int b) 
+{ 
+    return (b != 0) ? (float)a / b : 0; 
+}
+
+int main() 
+{
+    int choice, num1, num2;
+    printf("Menu:\n");
+    printf("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Exit\n");
+
+    while (1) 
+    {
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 5) 
+        {
+            printf("Exiting program...\n");
+            break;
+        }
+
+        printf("Enter two numbers: ");
+        scanf("%d %d", &num1, &num2);
+
+        switch (choice) 
+        {
+            case 1: printf("Result: %d\n", add(num1, num2)); 
+            break;
+            case 2: printf("Result: %d\n", subtract(num1, num2)); 
+            break;
+            case 3: printf("Result: %d\n", multiply(num1, num2)); 
+            break;
+            case 4: 
+                if (num2 != 0)
+                    printf("Result: %.2f\n", divide(num1, num2));
+                else
+                    printf("Division by zero is not allowed.\n");
+            break;
+            default: printf("Invalid choice. Try again.\n");
+        }//end of switch statement
+    }//end of while loop
+
+    return 0;
+}//end of mai  function
+
+
+
+OR
+
+Q.3 (a) Write an algorithm for finding odd and even number from given 
+two numbers. 
+
+Step 1: Start
+
+Step 2: Input two numbers (num1, num2)
+
+Step 3: Check if num1 % 2 == 0
+-->If true, print "num1 is Even"
+-->Else, print "num1 is Odd"
+
+Step 4: Check if num2 % 2 == 0
+-->If true, print "num2 is Even"
+-->Else, print "num2 is Odd"
+
+Step 5: End
+
+Q.3 (b) Write a program to check whether entered number is prime or 
+not with the help of user-defined function check-prime(). 
+[*MMIMP] 
+
+#include <stdio.h>
+
+// Function to check if a number is prime
+int check_prime(int num) 
+{
+    if (num <= 1) return 0;  // Numbers less than or equal to 1 are not prime
+    for (int i = 2; i <= num / 2; i++) 
+    {
+        if (num % i == 0) return 0;  // Divisible by another number
+    }
+    return 1;  // Prime number
+}
+
+int main() 
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (check_prime(num)) 
+    {
+        printf("%d is a Prime number.\n", num);
+    } else 
+    {
+        printf("%d is NOT a Prime number.\n", num);
+    }
+
+    return 0;
+}
+
+Q.3 (c) Write a program to find out the largest of an array. 
+
+#include <stdio.h>
+
+void main() 
+{
+    int n, max;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    //define the size of Array
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    max = arr[0];  // Assume the first element is the largest
+    for (int i = 1; i < n; i++) 
+    {
+        if (arr[i] > max) 
+        {
+            max = arr[i];  // Update largest if a bigger element is found
+        }
+    }
+
+    printf("The largest element in the array is: %d\n", max);
+    
+}

@@ -1,0 +1,42 @@
+Q.1 (a) List out types of software with Examples.
+
+Types of Software:
+
+System Software: OS (Windows, Linux)
+Application Software: MS Word, Web Browsers
+Utility Software: Antivirus, Disk Cleanup
+
+Q.1 (b) Distinguish the data types provided by C programming language.
+---------------------------------------------------
+Data    |Type	 |Description	|Example
+---------------------------------------------------
+int	    |Integer |values	    |int a = 10;
+float	|Decimal |values	    |float b = 3.14;
+char	|Single  |character	    |char c = 'A';
+double	|Large   |decimal 	    |double d = 3.14159;
+----------------------------------------------------
+
+Q.1 (c) Implement a C Program to Convert Temperature from Fahrenheit to Celsius and Vice Versa.
+
+#include <stdio.h>
+
+void main() 
+{
+    float temp;
+    char unit;
+    printf("Enter temperature (C for Celsius, F for Fahrenheit): ");
+    scanf("%f %c", &temp, &unit);
+
+    if (unit == 'F' || unit == 'f') 
+    {
+        printf("Celsius: %.2f\n", (temp - 32) * 5 / 9);
+    } else if (unit == 'C' || unit == 'c') 
+    {
+        printf("Fahrenheit: %.2f\n", (temp * 9 / 5) + 32);
+    } else 
+    {
+        printf("Invalid input\n");
+    }
+    
+}//end of main fucntion
+

@@ -1,0 +1,28 @@
+Q.1 (a) Define the following terms:
+
+[1]Application Software: Software designed to perform specific tasks, like MS Word, Excel, or games.
+[2]System Software: Software that manages hardware and system resources, like Operating Systems (Windows, Linux).
+[3]Algorithm: A step-by-step procedure to solve a problem.
+[4]Flowchart: A graphical representation of an algorithm using symbols like arrows, rectangles, and diamonds.
+
+Q.1 (b) Draw a Flowchart to find the largest of three numbers (A, B, C).
+
+1-->Start
+2-->Input A, B, C
+3-->Compare A > B and A > C → A is largest
+4-->Compare B > C → B is largest
+5-->Else → C is largest
+6-->Print Largest Number
+7-->End
+
+Q.1 (c) Explain different types of operators in C with their precedence and associativity.
+
+Types of Operators in C:
+
+[1]Arithmetic Operators (+, -, , /, %)
+[2]Relational Operators (==, !=, >, <, >=, <=)
+[3]Logical Operators (&&, ||, !)
+[4]Bitwise Operators (&, |, ^, <<, >>)
+[5]Assignment Operators (=, +=, -=, =, /=)
+[6]Increment/Decrement Operators (++/--)
+

@@ -1,0 +1,190 @@
+Q.5 (a) Program using fputc() and fputs()
+
+#include <stdio.h>
+
+void main() 
+{
+    FILE *file = fopen("test.txt", "w");
+    fputc('A', file);
+    fputs("Hello World", file);
+    fclose(file);
+ 
+}
+
+
+
+Q.5 (b) Categorize User-Defined Function’s Components (Elements)
+
+User-defined functions in C are divided into the following components:
+------------------
+Function Prototype:
+-------------------
+Declares the function and its return type before it is used in the program.
+Example: int add(int, int);
+Function Definition:
+
+Contains the actual code or logic of the function.
+Example:
+
+int add(int a, int b) 
+{  
+    return a + b;  
+}
+
+----------------
+Function Call:
+----------------
+
+Invokes the function from the main program.
+Example:
+
+int result = add(5, 10);  
+
+---------------------
+Function Return Type:
+---------------------
+
+Specifies the data type of the value returned by the function.
+Example: int in int add(int, int);
+
+=-------------------
+Function Parameters:
+--------------------
+
+Variables declared in the function prototype and definition that accept values from the function call.
+Example: int a, int b in int add(int a, int b);
+
+
+Q.5 (c) Function Definition, Prototype, and Call with Example
+
+1. Function Prototype:
+-------------------------
+Declares the function before use.
+Syntax:
+
+return_type function_name(parameter_list);
+
+2. Function Definition:
+------------------------
+Provides the actual logic of the function.
+Syntax:
+
+return_type function_name(parameter_list) 
+{  
+    // Function body  
+}
+
+3. Function Call:
+------------------
+Invokes the function in the main program.
+Syntax:
+
+function_name(arguments);
+Example:
+
+#include <stdio.h>
+
+4.Function Prototype
+--------------------
+
+int add(int, int);  
+
+int main() 
+{
+    int result;
+    // Function Call
+    result = add(5, 7);  
+    printf("Sum: %d\n", result);
+    return 0;
+}
+
+5.Function Definition
+-----------------------
+int add(int a, int b) 
+{  
+    return a + b;  
+}
+
+OR
+
+Q.5 (a) Advantages of Recursion
+
+-->Simplifies Complex Problems: Makes it easier to solve problems like tree traversal or factorial calculation.
+
+-->Reduces Code Length: Eliminates the need for complex loops.
+
+-->Better for Divide and Conquer Problems: Ideal for algorithms like Quick Sort and Merge Sort.
+
+Q.5 (b) For Loop Explanation with Example
+
+-->The for loop is used for repetition when the number of iterations is known.
+
+Syntax:
+
+for(initialization; condition;Increament/Decreament) 
+{  
+    // Code to be executed  
+}
+
+Example:
+
+#include <stdio.h>
+
+void main() 
+{
+    for(int i = 1; i <= 5; i++) 
+    {
+        printf("%d\n", i);
+    }
+    
+}
+
+
+Q.5 (c) Call by Value vs Call by Reference
+------------------
+1. Call by Value:
+------------------
+A copy of the actual parameter is passed to the function.
+Changes made in the function do not affect the original variable.
+Example:
+
+#include <stdio.h>
+
+void changeValue(int x) 
+{
+    x = 20;
+}
+
+int main() 
+{
+    int a = 10;
+    changeValue(a);
+    printf("Value of a: %d\n", a);  // Output: 10
+    return 0;
+}
+
+O/P:Value of a: 10
+
+---------------------
+2. Call by Reference:
+----------------------
+-->The address of the actual parameter is passed to the function.
+Changes made in the function affect the original variable.
+Example:
+
+#include <stdio.h>
+
+void changeValue(int *x) 
+{
+    *x = 20;
+}
+
+int main() 
+{
+    int a = 10;
+    changeValue(&a);
+    printf("Value of a: %d\n", a);  // Output: 20
+    return 0;
+}
+
+------------------END-----------------------

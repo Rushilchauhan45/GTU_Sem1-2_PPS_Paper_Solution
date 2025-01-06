@@ -1,0 +1,55 @@
+Q.2 (a) Define break and continue statement with Example.
+
+break: Exits the current loop.
+continue: Skips the current iteration and continues with the next iteration.
+
+Example:
+
+for (int i = 1; i <= 10; i++)
+{
+    if (i == 3)
+    {
+         continue;
+    }else
+    {
+        break;
+    }
+    printf("%d ", i);
+}//end of for loop
+
+Q.2 (b) Categorize the major components of a computer system and give their functions.
+
+Input Devices: Provide data to the system (e.g., Keyboard, Mouse).
+Processor (CPU): Processes data.
+Memory (RAM/ROM): Stores data temporarily/permanently.
+Output Devices: Displays results (e.g., Monitor, Printer).
+
+Q.2 (c) Flowchart for Factorial Number
+
+[Note : you see the solution of this question at winter 2023 Q.2]
+
+OR
+
+Q.2 (c) Program to Print Pattern:
+
+Pattern:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+#include <stdio.h>
+
+void main() 
+{
+    for (int i = 1; i <= 5; i++) 
+    {
+        for (int j = 1; j <= i; j++) 
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+    
+}

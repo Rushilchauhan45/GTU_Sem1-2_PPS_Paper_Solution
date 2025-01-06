@@ -1,0 +1,51 @@
+Q.2 (a) Discuss break and continue statements in C with examples.
+
+break: Used to exit a loop or switch statement.
+continue: Skips the current iteration and moves to the next.
+
+Example:
+
+for(int i=1; i<=10; i++)
+ {  
+    if(i==5)
+    {
+         continue;
+    }else 
+    {
+        break;
+    } 
+    printf("%d ", i);  
+}
+
+Q.2 (b) Differentiate while and do..while Loop (4 Marks)[*IMP]
+------------------------------------------------------------------------------
+while	                             |do..while
+------------------------------------------------------------------------------
+Condition is checked first.	         |Condition is checked after execution.
+May not execute if the condition is  |
+false initially.	                 |Executes at least once.
+                                     | 
+Sysntax :                            |Sysntax: 
+                                     |
+//initialize;                        |//initialize; 
+while(//Condition)                   |do 
+{                                    |{
+    //executable code                |     //executable code
+    //Increament/Decreament;         |     //increament/decreament;
+}                                    |}(//Condition);
+---------------------------------------------------------------------------------
+
+Q.2 (c) OR (c) Write C Programs for the patterns.
+Pattern 1:
+  1  
+ 2 2  
+3 3 3  
+
+Code :
+
+Pattern 2:
+1  
+2 3  
+4 5 6  
+
+Code:

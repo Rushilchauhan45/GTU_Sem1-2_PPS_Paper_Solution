@@ -1,0 +1,141 @@
+Q.5 (a) What do you mean by recursive function? What care must be taken 
+while writing a program with recursive function?
+
+-->Definition:A function that calls itself.
+-->Care: Must have a base condition to prevent infinite recursion.
+-->Example: Factorial calculation.
+[Note:You can see the example code at solution of winter 2022 paper also]
+
+Q.5 (b) Explain fopen() and its mode with example. 
+
+-->Used to open files in C.
+-->Modes: r(read), w(write), a(Append), rb(Read Bainary), wb(Write bainary), ab(Append Bainary).
+-->Example: fopen("file.txt", "r");
+
+Q.5 (c) Describe different categories of user-defined functions. 
+
+In C, user-defined functions are categorized based on whether they accept arguments and whether they return a value. 
+-->There are main four types of UDF Fuctions...
+
+[1]Function with No Arguments and No Return Value:
+
+Definition: These functions neither take any parameters nor return any value.
+Usage: Used for tasks that are self-contained and do not require external input/output.
+
+example :
+---------
+void xyz() 
+{
+    printf("Hello, World!\n");
+}
+
+[2]Function with Arguments but No Return Value:
+
+Definition: These functions accept parameters but do not return any value.
+Usage: Used when data needs to be passed to the function, but no result needs to be returned.
+
+example :
+----------
+void Sum(int a, int b) 
+{
+    printf("Sum: %d\n", a + b);
+}
+
+[3]Function with No Arguments but Returns a Value:
+
+Definition: These functions do not accept parameters but return a value.
+Usage: Used when a value needs to be returned, but no input parameters are required.
+
+Example:
+--------
+int getNumber() 
+{
+    return 42;
+}
+
+[4]Function with Arguments and Returns a Value:
+
+Definition: These functions accept parameters and also return a value.
+Usage: Used for operations where both input and output are required.
+
+example:
+---------
+int add(int a, int b) 
+{
+    return a + b;
+}
+
+
+Technique to remember:
+----------------------
+NANR
+WANR
+NRWR
+WRNA
+
+
+OR
+
+Q.5 (a) What is pointer? Explain how pointers are declared and 
+initialized.
+
+Pointer:
+
+-->A pointer is a variable that stores the address of another variable.
+-->It allows direct access to memory locations, enabling dynamic memory manipulation.
+
+Declaration:
+
+data_type *pointer_name;
+
+initialization:
+
+int a = 10;  
+int *ptr = &a;  // ptr stores the address of variable 'a'
+
+ 
+Q.5 (b) Compare malloc() and calloc() functions for dynamic memory [*IMP]
+allocation. 
+----------------------------------------------------------------------------------------------------------------
+Aspect	        |              malloc()	                  |               calloc()
+----------------------------------------------------------------------------------------------------------------
+Purpose	        | Allocates memory dynamically	          |Allocates memory dynamically and initializes to zero
+Initialization	| Does not initialize memory	          |Initializes all memory blocks to zero
+Syntax	        | ptr = (int*)malloc(size)	              |ptr = (int*)calloc(n, size)
+Arguments	    | Takes total memory size in bytes	      |Takes number of blocks and size of each block
+Return Value	| Returns pointer to allocated memory	  |Returns pointer to allocated memory
+Failure	        | Returns NULL if memory allocation fails |Returns NULL if memory allocation fails
+----------------------------------------------------------------------------------------------------------------
+
+Q.5 (c) Develope a program in C to check the entered number is prime or not by creating a user-defined function named check_prime().[*MMIMP] 
+
+#include <stdio.h>
+
+// User-defined function to check prime
+int check_prime(int num) 
+{
+    if (num <= 1) return 0;  // Not prime
+    for (int i = 2; i <= num / 2; i++) 
+    {
+        if (num % i == 0) return 0;  // Not prime
+    }
+    return 1;  // Prime
+}
+
+// Main function
+int main() 
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (check_prime(num)) 
+    {
+        printf("%d is a Prime number.\n", num);
+    } else 
+    {
+        printf("%d is NOT a Prime number.\n", num);
+    }
+    return 0;
+}
+

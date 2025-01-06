@@ -1,0 +1,192 @@
+Q.4 (a) What is a structure?
+Structure is a user-defined data type in C.
+Example:
+
+struct Student 
+{
+    int roll;
+    float marks;
+};
+
+Q.4 (b) String Manipulation Functions:
+
+strcat(): Concatenates strings.
+strcpy(): Copies one string to another.
+strcmp(): Compares two strings.
+strlen(): Returns string length.
+
+Q.4 (c) Write a program in c for multiply two matrices A and B of dimensions  
+pXq and qXr respectively and store the result in  third matrix C
+
+#include <stdio.h>
+
+void main() 
+{
+    int p, q, r;
+    printf("Enter dimensions of Matrix A (p x q): ");
+    scanf("%d %d", &p, &q);
+    printf("Enter dimensions of Matrix B (q x r): ");
+    scanf("%d %d", &q, &r);
+
+    int A[p][q], B[q][r], C[p][r];
+
+    printf("Enter elements of Matrix A:\n");
+    for (int i = 0; i < p; i++)
+    {
+          for (int j = 0; j < q; j++)
+          {
+                scanf("%d", &A[i][j]);
+          }
+    }
+
+    printf("Enter elements of Matrix B:\n");
+    for (int i = 0; i < q; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            scanf("%d", &B[i][j]);
+
+        }
+    }
+
+    // Initialize Matrix C with 0
+    for (int i = 0; i < p; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            C[i][j] = 0;
+        }
+    }
+
+    // Matrix Multiplication
+    for (int i = 0; i < p; i++) 
+    {
+        for (int j = 0; j < r; j++) 
+        {
+            for (int k = 0; k < q; k++) 
+            {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    printf("Resultant Matrix C (A x B):\n");
+    for (int i = 0; i < p; i++) 
+    {
+        for (int j = 0; j < r; j++) 
+        {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+    
+}//end of main fuction 
+
+
+OR
+
+Q.4 (A)Demonstrate declaration and initialization of two dimentional Array with suitable example
+declaration:
+
+data_type array_name[rows][columns];
+
+Example:
+
+#include <stdio.h>
+
+void main() 
+{
+    int arr[2][3] = 
+    {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    printf("2D Array Elements:\n");
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 3; j++) 
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    
+}
+
+
+Q.4 (B)Exlplain nested if else ladder with suitable example.
+
+Definition:A nested if-else ladder is used when multiple conditions need to be checked sequentially.
+
+Example:
+
+#include <stdio.h>
+
+int main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    if (marks >= 90) {
+        printf("Grade: A\n");
+    } else if (marks >= 75) {
+        printf("Grade: B\n");
+    } else if (marks >= 60) {
+        printf("Grade: C\n");
+    } else if (marks >= 40) {
+        printf("Grade: D\n");
+    } else {
+        printf("Grade: F (Fail)\n");
+    }
+
+    return 0;
+}
+
+
+Q.4 (C)Write a Prohram in c using structure to enter rollno,marks of the three subjects for 3 students and find the total obtained by each student.
+
+#include <stdio.h>
+
+// Define a structure for student
+struct Student 
+{
+    int rollno;
+    int marks[3];
+    int total;
+};
+
+int main() 
+{
+    struct Student students[3];
+
+    // Input details for 3 students
+    for (int i = 0; i < 3; i++) 
+    {
+        printf("Enter Roll No. for Student %d: ", i + 1);
+        scanf("%d", &students[i].rollno);
+        students[i].total = 0;
+        printf("Enter marks for 3 subjects:\n");
+        for (int j = 0; j < 3; j++) 
+        {
+            scanf("%d", &students[i].marks[j]);
+            students[i].total += students[i].marks[j];
+        }
+    }
+
+    // Display details
+    printf("\nStudent Details:\n");
+    for (int i = 0; i < 3; i++) 
+    {
+        printf("Roll No: %d, Total Marks: %d\n", students[i].rollno, students[i].total);
+    }
+
+    return 0;
+}
+
+
+------------------END--------------
+
+

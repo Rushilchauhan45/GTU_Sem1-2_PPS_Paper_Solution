@@ -1,0 +1,112 @@
+Q.4 (a) Importance of stdio.h Header File.
+
+Provides standard input/output functions like printf, scanf, getchar.
+Essential for I/O operations in C programs.
+
+Q.4 (b) File Management in C
+
+-->File Management in C refers to handling files for data storage, retrieval, and manipulation using functions like `fopen()`, `fclose()`, `fread()`, and `fwrite()`. It allows programs to create, read, write, and modify files efficiently. Common file modes include `r` (read), `w` (write), and `a` (append).
+
+----------------------
+File Functions:
+----------------------
+fopen: Open file
+fclose: Close file
+fprintf: Write to file
+fscanf: Read from file
+-----------------------
+
+Q.4 (c) Prime Number Function
+[*MMIMP][Easy also]
+
+#include<stdio.h>
+
+int check_prime(num) 
+{
+    if (num <= 1) 
+    {
+        return 0;
+    }
+    for (int i = 2; i <= num / 2; i++) 
+    {
+        if (num % i == 0) 
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main()
+{
+    int num ;
+    printf("Enter the Number:");
+    scanf("%d",num);
+
+    if(check_prime())
+    {
+        printf("%d is prime number..",num);
+    }else
+    {
+        printf("%d is Not prime number..",num);
+    }
+    return num;
+}
+
+OR
+
+Q.4 (a) Distinguish between Structure and Union.[*IMP] 
+ 
+Structure vs Union (3 Marks)
+[Memory Allocation:]
+
+Structure: Allocates separate memory for each member.
+Union: All members share the same memory location.
+
+[Size:]
+
+Structure: Size is the sum of all members' sizes.
+Union: Size is equal to the largest member's size.
+
+[Access:]
+
+Structure: All members can be accessed simultaneously.
+Union: Only one member can be accessed at a time.
+
+Q.4 (b) Develop an algorithm to print first N Fibonacci numbers. 04 
+
+1-->Start
+2-->Take input N (number of Fibonacci numbers to print).
+3-->Set:
+    a = 0 (First number)
+    b = 1 (Second number)
+4-->Print a and b.
+5-->Repeat the following steps (N-2) times:
+    Calculate c = a + b (Next number in the sequence).
+    Print c.
+    a = b and b = c.
+6-->Stop
+
+Q.4 (c) Sum, Min, and Average of an Array
+
+#include <stdio.h>
+
+void main() 
+{
+    int arr[10], sum = 0, min;
+    float avg;
+    printf("Enter 10 numbers:\n");
+    for (int i = 0; i < 10; i++) 
+    {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+    min = arr[0];
+    for (int i = 1; i < 10; i++) 
+    {
+        if (arr[i] < min) min = arr[i];
+    }
+    avg = sum / 10.0;
+    printf("Sum: %d, Min: %d, Average: %.2f\n", sum, min, avg);
+    
+}
